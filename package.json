@@ -1,0 +1,189 @@
+{
+  "name": "obe-next",
+  "version": "1.28.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "quick-test": "jest --bail[=1]",
+    "lint:fix": "yarn run eslint --fix --ext .js --ext .jsx src",
+    "prettier": "npx prettier src --check",
+    "prepare": "husky install",
+    "pre-commit": "next lint --fix && git add -A ."
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "dependencies": {
+    "@datadog/browser-rum": "^4.11.3",
+    "@datadog/rum-react-integration": "https://github.com/DataDog/rum-react-integration-examples",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@opentok/client": "^2.21.2",
+    "@rehooks/window-scroll-position": "1.0.1",
+    "@sanity/block-content-to-react": "2.0.7",
+    "@sanity/client": "0.142.0",
+    "@sanity/image-url": "0.140.19",
+    "@segment/snippet": "4.15.3",
+    "@silvermine/videojs-chromecast": "https://github.com/obefitness/videojs-chromecast#f6e19e6",
+    "@splitsoftware/splitio-react": "1.4.0",
+    "@vimeo/player": "2.14.1",
+    "actioncable": "5.2.4-5",
+    "axios": "0.21.2",
+    "bootstrap": "4.5.0",
+    "circletype": "2.3.0",
+    "classnames": "2.2.6",
+    "color-convert": "^2.0.1",
+    "core-js": "3.9.1",
+    "emoji-picker-react": "^3.5.1",
+    "feed-media-audio-player": "1.102.0-beta.4",
+    "file-saver": "2.0.5",
+    "filestack-react": "3.1.0",
+    "intersection-observer": "0.12.0",
+    "jquery": "3.5.1",
+    "jstz": "2.1.1",
+    "lint-staged": "^13.0.3",
+    "lodash.camelcase": "4.3.0",
+    "lodash.capitalize": "4.2.1",
+    "lodash.chunk": "4.2.0",
+    "lodash.debounce": "4.0.8",
+    "lodash.find": "4.6.0",
+    "lodash.isempty": "4.4.0",
+    "lodash.isequal": "4.5.0",
+    "lodash.isfunction": "3.0.9",
+    "lodash.map": "4.6.0",
+    "lodash.pick": "4.4.0",
+    "lodash.startcase": "4.4.0",
+    "lodash.throttle": "4.1.1",
+    "moment": "2.29.4",
+    "next": "12.3.4",
+    "next-seo": "4.20.0",
+    "opentok-react": "0.11.0",
+    "prop-types": "15.7.2",
+    "query-string": "6.14.1",
+    "rc-pagination": "1.21.1",
+    "react": "18.2.0",
+    "react-async-hook": "3.6.1",
+    "react-confetti": "6.0.0",
+    "react-datepicker": "2.16.0",
+    "react-device-detect": "1.17.0",
+    "react-dom": "18.2.0",
+    "react-draggable": "4.4.3",
+    "react-infinite-scroll-component": "5.0.5",
+    "react-intersection-observer": "9.4.0",
+    "react-marquee-slider": "1.1.2",
+    "react-maskedinput": "4.0.1",
+    "react-page-visibility": "5.1.0",
+    "react-router": "5.3.4",
+    "react-router-dom": "5.3.4",
+    "react-share": "4.2.1",
+    "react-spring": "8.0.27",
+    "react-stripe-elements": "2.0.3",
+    "react-transition-group": "4.4.1",
+    "resize-observer-polyfill": "1.5.1",
+    "sass": "1.32.7",
+    "slick-carousel": "1.8.1",
+    "styled-components": "5.3.6",
+    "swiper": "6.8.1",
+    "swr": "1.0.0",
+    "video.js": "7.21.1",
+    "videojs-hotkeys": "0.2.25"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@emotion/eslint-plugin": "^11.7.0",
+    "@emotion/jest": "^11.10.5",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "webpack-bundle-analyzer": "4.4.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        1,
+        "always",
+        150
+      ],
+      "subject-case": [
+        1,
+        "always",
+        "sentence-case"
+      ],
+      "type-case": [
+        1,
+        "always",
+        "lower-case"
+      ],
+      "type-enum": [
+        1,
+        "always",
+        [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test"
+        ]
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "release": {
+    "branches": [
+      "test"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "Release: ${nextRelease.version} \n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ],
+    "success": false,
+    "fail": false
+  }
+}
