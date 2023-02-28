@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@datadog/browser-rum": "^4.11.3",
-    "@datadog/rum-react-integration": "https://github.com/DataDog/rum-react-integration-examples",
+    "@datadog/rum-react-integration": "https://github.com/DataDog/rum-react-integration-examples.git",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@opentok/client": "^2.21.2",
@@ -29,7 +29,7 @@
     "@sanity/client": "0.142.0",
     "@sanity/image-url": "0.140.19",
     "@segment/snippet": "4.15.3",
-    "@silvermine/videojs-chromecast": "https://github.com/obefitness/videojs-chromecast#f6e19e6",
+    "@silvermine/videojs-chromecast": "https://github.com/obefitness/videojs-chromecast.git#f6e19e6",
     "@splitsoftware/splitio-react": "1.4.0",
     "@vimeo/player": "2.14.1",
     "actioncable": "5.2.4-5",
